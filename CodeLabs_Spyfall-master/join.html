@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Join a Room</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
-    <!--Bootstrap icons-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!--links for bootstrap access to javascript functions-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod 8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class = "jumbotron bg">
-      <a href = "index.html"><img id = "logo" src="spyfall.png" alt="logo"></a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Join a Room</title>
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <!--Bootstrap icons-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-      <div class = "join-room">
-        <h1 id = "joinroom">Enter room code</h1>
-        <div class = "form-group row" id = "roomcode">
-          <div class = "col-md-3"></div>
-          <div class = "col-md-6"><input type="text" name="roomcode" placeholder="Room Code" required class="form-control form-control-lg"></div>
-          <div class = "col-md-3"></div>
-        </div>
-       <a href = "game.html"><button type="button" class="btn-lg btn btn-outline-dark">Lets go</button></a>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!--links for bootstrap access to javascript functions-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod 8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="jumbotron bg">
+    <a href="index.html"><img id="logo" src="./cards/icon.png" alt="logo"></a>
+
+    <div class="join-room">
+      <h1 id="joinroom">Enter room code</h1>
+      <div class="form-group row" id="roomcode">
+        <div class="col-md-3"></div>
+        <div class="col-md-6"><input type="text" name="roomcode" placeholder="Room Code" required
+            class="form-control form-control-lg"></div>
+        <div class="col-md-3"></div>
       </div>
-
+      <a href="game.html"><button type="button" class="btn-lg btn btn-outline-dark">Lets go</button></a>
     </div>
-    
-  </body>
+
+  </div>
+
+</body>
+
 </html>

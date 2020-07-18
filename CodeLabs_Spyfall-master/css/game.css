@@ -1,7 +1,9 @@
 #logo
 {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -12px;
 }
 
 .header
@@ -14,15 +16,9 @@
 {
   font-family: 'Courier New', Courier, monospace;
   left: 0;
-  line-height: 200px;
-  margin-top: -100px;
-  position: absolute;
+  line-height: 40px;
+  position: relative;
   text-align: center;
   top: 50%;
   width: 100%;
-}
-
-html
-{
-  background-color: #e9ecef;
 }
