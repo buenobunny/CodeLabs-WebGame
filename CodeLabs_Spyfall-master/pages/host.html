@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Host a Room</title>
-  <link href="../css/host.css" rel="stylesheet" type="text/css" />
+  <link href="../public/css/host.css" rel="stylesheet" type="text/css" />
   <script src="script.js"></script>
 
   <!--Bootstrap icons-->
@@ -30,7 +30,7 @@
 <body>
 
   <header>
-    <a href="index.html"><img id="logo" src="../cards/icon.png" alt="logo"></a>
+    <a href="index.html"><img id="logo" src="../public/cards/icon.png" alt="logo"></a>
 
   </header>
 
@@ -40,71 +40,72 @@
       <h3 class="card-header text-center">Host a Game</h3>
 
       <div class="card-body">
-        <div class="form-group row">
-          <label for="event" class="col-sm-4 col-form-label">Name of Event:</label>
-          <div class="col-sm-8">
-            <input type="text" name="event" placeholder="Event" required class="form-control">
+        <form action="game.html">
+          <div class="form-group row">
+            <label for="event" class="col-sm-4 col-form-label">Name of Event:</label>
+            <div class="col-sm-8">
+              <input type="text" name="event" placeholder="Event" required class="form-control">
+            </div>
+            <br><br>
           </div>
-          <br><br>
-        </div>
 
-        <div class="form-group row">
-          <label for="dropdown" class="col-sm-4 col-form-label">Number of Players:</label>
-          <div class="col-sm-8">
-            <button class="btn btn-outline-secondary dropdown-toggle " type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup='true' aria-expanded="false">?</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a href="#" class="dropdown-item">3</a>
-              <a href="#" class="dropdown-item">4</a>
-              <a href="#" class="dropdown-item">5</a>
-              <a href="#" class="dropdown-item">6</a>
-              <a href="#" class="dropdown-item">7</a>
-              <a href="#" class="dropdown-item">8</a>
+          <div class="form-group row">
+            <label for="dropdown" class="col-sm-4 col-form-label">Number of Players:</label>
+            <div class="col-sm-2">
+              <select class="form-control form-control-md btn-outline-secondary" required>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+              </select>
             </div>
           </div>
-        </div>
 
-        <div class="form-group row">
-          <label for="dropdown" class="col-sm-4 col-form-label">Time Limit:</label>
-          <div class="col-sm-8">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup='true' aria-expanded="false">?</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a href="#" class="dropdown-item">4 min</a>
-              <a href="#" class="dropdown-item">5 min</a>
-              <a href="#" class="dropdown-item">6 min</a>
-              <a href="#" class="dropdown-item">7 min</a>
-              <a href="#" class="dropdown-item">8 min</a>
-              <a href="#" class="dropdown-item">9 min</a>
+          <div class="form-group row">
+            <label for="dropdown" class="col-sm-4 col-form-label">Time Limit:</label>
+            <div class="col-sm-3">
+              <select class="form-control form-control-md btn-outline-secondary" required>
+                <option>4 minutes</option>
+                <option>5 minutes</option>
+                <option>6 minutes</option>
+                <option>7 minutes</option>
+                <option>8 minutes</option>
+                <option>9 minutes</option>
+              </select>
+
             </div>
           </div>
-        </div>
 
-        <div class="row">
-          <label for="btn-group" class="col-sm-4 col-form-label">Number of Spies:</label>
-          <div class="col-sm-8">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option1" autcomplete="off" checked>One
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autcomplete="off">Two
-              </label>
+          <div class="row">
+            <label for="btn-group" class="col-sm-4 col-form-label">Number of Spies:</label>
+            <div class="col-md-4 py-1">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                  value="option1" required>
+                <label class="form-check-label" for="inlineRadio1">One</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2">Two</label>
+              </div>
             </div>
           </div>
-        </div>
-        <br>
-        <p><strong>Room Code:</strong> *autopopulates here*</p>
+          <br>
+          <p><strong>Room Code:</strong> *autopopulates here*</p>
       </div>
 
       <div class="col-sm-2 offset-sm-9">
-        <a href="game.html" class="btn btn-outline-dark btn-center">Lets go <svg width="1em" height="1em"
-            viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <button type="submit" class="btn btn-outline-dark">Lets go <svg width="1em" height="1em" viewBox="0 0 16 16"
+            class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
               d="M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.793 8 8.146 5.354a.5.5 0 0 1 0-.708z" />
             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H4.5A.5.5 0 0 1 4 8z" /></svg>
-        </a>
+        </button>
       </div>
+      </form>
       <br>
     </div>
   </div>

@@ -3,7 +3,7 @@
 <body>
 
     <header>
-        <a href="index.html"><img id="logo" src="/cards/icon.png" alt="logo"></a>
+        <a href="/"><img id="logo" src="/cards/icon.png" alt="logo"></a>
 
     </header>
 
@@ -13,7 +13,7 @@
             <h3 class="card-header text-center">Host a Game</h3>
 
             <div class="card-body">
-                <form action="game.html">
+                <form action="game">
                     <div class="form-group row">
                         <label for="event" class="col-sm-4 col-form-label">Name of Event:</label>
                         <div class="col-sm-8">
@@ -23,29 +23,31 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="dropdown" class="col-sm-4 col-form-label">Number of Players:</label>
+                        <label for="players" class="col-sm-4 col-form-label">Number of Players:</label>
                         <div class="col-sm-2">
-                            <select class="form-control form-control-md btn-outline-secondary" required>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
+                            <select class="form-control form-control-md btn-outline-secondary" required="true"
+                                id="players" name="players">
+                                <option value="3p">3</option>
+                                <option value="4p">4</option>
+                                <option value="5p">5</option>
+                                <option value="6p">6</option>
+                                <option value="7p">7</option>
+                                <option value="8p">8</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="dropdown" class="col-sm-4 col-form-label">Time Limit:</label>
+                        <label for="duration" class="col-sm-4 col-form-label">Time Limit:</label>
                         <div class="col-sm-3">
-                            <select class="form-control form-control-md btn-outline-secondary" required>
-                                <option>4 minutes</option>
-                                <option>5 minutes</option>
-                                <option>6 minutes</option>
-                                <option>7 minutes</option>
-                                <option>8 minutes</option>
-                                <option>9 minutes</option>
+                            <select class="form-control form-control-md btn-outline-secondary" required="true"
+                                id="duration" name="duration">
+                                <option value="4">4 minutes</option>
+                                <option value="5">5 minutes</option>
+                                <option value="6">6 minutes</option>
+                                <option value="7">7 minutes</option>
+                                <option value="8">8 minutes</option>
+                                <option value="9">9 minutes</option>
                             </select>
 
                         </div>
@@ -54,12 +56,11 @@
                     <div class="row">
                         <label for="btn-group" class="col-sm-4 col-form-label">Number of Spies:</label>
                         <div class="col-md-4 py-1">
-                            <div class="form-check form-check-inline">
+                            <div class="form-check form-check-inline" required="true">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1">
+                                    value="option1" required>
                                 <label class="form-check-label" for="inlineRadio1">One</label>
-                            </div>
-                            <div class="form-check form-check-inline">
+
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                                     value="option2">
                                 <label class="form-check-label" for="inlineRadio2">Two</label>
@@ -71,7 +72,7 @@
             </div>
 
             <div class="col-sm-2 offset-sm-9">
-                <button type="submit" class="btn btn-outline-dark">Lets go <svg width="1em" height="1em"
+                <button type="submit" class="btn btn-outline-dark" onClick = "startTimer()">Lets go <svg width="1em" height="1em"
                         viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -84,6 +85,8 @@
             <br>
         </div>
     </div>
+
+  
 
 </body>
 
