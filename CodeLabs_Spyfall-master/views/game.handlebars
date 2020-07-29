@@ -1,167 +1,193 @@
-<title>Game</title>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Spyfall</title>
+  <link href="css/game.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+
+  <!--Bootstrap icons-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <!--links for bootstrap access to javascript functions-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod 8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</head>
 
 <body>
 
-    <div class="jumbotron bg-light">
-        <a href="/"><img id="logo" src="/cards/icon.png" alt="logo"></a>
-        <div class="header">
-            <h1 id="player_in_game">*Name Goes Here*</h1>
-            <br>
-            <div class="row">
-                <h3 class="col-md-6">Role: </h3>
-                <h3 class="col-md-6">Location: </h3>
-            </div>
-            <br>
-            <h3 id="time">Time Left:</h3>
-        </div>
-        <br><br>
-        <div class="card-deck">
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/HSCARD.png" alt="High School">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>High School</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/BANK.png" alt="Bank">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Bank</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/COLLEGE.png" alt="College">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>College</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/PSHIP.png" alt="Pirate Ship">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Pirate Ship</b></h5>
-                </div>
-            </div>
-        </div>
-
-        <br><br>
-        <div class="card-deck">
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/FARM.png" alt="Farm">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Farm</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/RESTO.png" alt="Restaurant">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Restaurant</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/OFFICE.png" alt="Office">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Office</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/THEMEPARK.png" alt="Theme Park">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Theme Park</b></h5>
-                </div>
-            </div>
-        </div>
-
-        <br><br>
-        <div class="card-deck">
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/SUBMARINE.png" alt="Submarine">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Submarine</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/REUNION.png" alt="Family Reunion">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Family Reunion</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/AIRPLANE.png" alt="Airplane">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Airplane</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/MOVIESET.png" alt="Movie Set">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Movie Set</b></h5>
-                </div>
-            </div>
-        </div>
-
-        <br><br>
-        <div class="card-deck">
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/GROCERY.png" alt="Grocery">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Grocery</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/CINEMA.png" alt="Cinema">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Cinema</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/BEACH.png" alt="Beach">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Beach</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/HOSPITAL.png" alt="Hospital">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Hospital</b></h5>
-                </div>
-            </div>
-        </div>
-
-        <br><br>
-        <div class="card-deck">
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/SPA.png" alt="Spa">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Spa</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/CASINO.png" alt="Casino">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Casino</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/MOON.png" alt="Moon">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Moon</b></h5>
-                </div>
-            </div>
-            <div class="card border-secondary mb-3">
-                <img class="card-img-top pt-3" src="/cards/cards/COURT.png" alt="Courthouse">
-                <div class="card-body">
-                    <h5 class="card-title centertest"><b>Courthouse</b></h5>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="text-center">
-            <a href="time-up" class="btn btn-outline-danger btn-lg text-center">End Game</a>
-        </div>
-
-
+  <div class="jumbotron bg-light">
+    <a href="index.html"><img id="logo" src="./cards/icon.png" alt="logo"></a>
+    <div class="header">
+      <h1>*Name Goes Here*</h1>
+      <br>
+      <div class="row">
+        <h3 class="col-md-6">Role: </h3>
+        <h3 class="col-md-6">Location: </h3>
+      </div>
+      <br>
+      <h3 id="time">Time Left:</h3>
     </div>
+    <br><br>
+    <div class="card-deck">
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/HSCARD.png" alt="High School">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>High School</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/BANK.png" alt="Bank">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Bank</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/COLLEGE.png" alt="College">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>College</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/PSHIP.png" alt="Pirate Ship">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Pirate Ship</b></h5>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="card-deck">
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/FARM.png" alt="Farm">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Farm</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/RESTO.png" alt="Restaurant">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Restaurant</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/OFFICE.png" alt="Office">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Office</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/THEMEPARK.png" alt="Theme Park">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Theme Park</b></h5>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="card-deck">
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/SUBMARINE.png" alt="Submarine">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Submarine</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/REUNION.png" alt="Family Reunion">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Family Reunion</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/AIRPLANE.png" alt="Airplane">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Airplane</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/MOVIESET.png" alt="Movie Set">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Movie Set</b></h5>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="card-deck">
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/GROCERY.png" alt="Grocery">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Grocery</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/CINEMA.png" alt="Cinema">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Cinema</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/BEACH.png" alt="Beach">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Beach</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/HOSPITAL.png" alt="Hospital">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Hospital</b></h5>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div class="card-deck">
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/SPA.png" alt="Spa">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Spa</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/CASINO.png" alt="Casino">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Casino</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/MOON.png" alt="Moon">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Moon</b></h5>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3">
+        <img class="card-img-top pt-3" src="./cards/cards/COURT.png" alt="Courthouse">
+        <div class="card-body">
+          <h5 class="card-title centertest"><b>Courthouse</b></h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="text-center">
+      <a href="game-over.html" class="btn btn-outline-danger btn-lg text-center">End Game</a>
+    </div>
+
+
+  </div>
 
 </body>
 
-
-<link href="/css/game.css" rel="stylesheet" type="text/css" />
+</html>
