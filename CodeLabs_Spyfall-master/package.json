@@ -1,0 +1,26 @@
+{
+  "name": "spyfall",
+  "version": "1.0.0",
+  "description": "webgame based on spyfall cardgame",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyalexx/CodeLabs-WebGame.git"
+  },
+  "keywords": [
+    "spyfall"
+  ],
+  "author": "Cirill, Shreya, Lavanya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soyalexx/CodeLabs-WebGame/issues"
+  },
+  "homepage": "https://github.com/soyalexx/CodeLabs-WebGame#readme",
+  "dependencies": {
+    "firebase": "^7.17.1",
+    "firebase-admin": "^9.0.0"
+  }
+}

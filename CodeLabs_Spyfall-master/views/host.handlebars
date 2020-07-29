@@ -13,7 +13,7 @@
             <h3 class="card-header text-center">Host a Game</h3>
 
             <div class="card-body">
-                <form action="game">
+                <form action="game" id="host_input">
                     <div class="form-group row">
                         <label for="event" class="col-sm-4 col-form-label">Name of Event:</label>
                         <div class="col-sm-8">
@@ -72,8 +72,8 @@
             </div>
 
             <div class="col-sm-2 offset-sm-9">
-                <button type="submit" class="btn btn-outline-dark">Lets go <svg width="1em" height="1em"
-                        viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+                <button type="submit" onClick="sayInfo()" class="btn btn-outline-dark">Lets go <svg width="1em"
+                        height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                             d="M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.793 8 8.146 5.354a.5.5 0 0 1 0-.708z" />

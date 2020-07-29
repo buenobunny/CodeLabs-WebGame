@@ -1,0 +1,38 @@
+{
+  "Locations" : {
+    "Airplane" : [ "Spy", "Pilot", "Karen", "Cry Baby", "Stewardess", "Businessman in First Class", "Sleeping Passenger", "First time Passenger" ],
+    "Bank" : [ "Spy", "Teller", "Security Guard", "Manager", "Janitor", "CFO", "Teller", "Security Guard" ],
+    "Beach" : [ "Spy", "Sunbather", "Sufer", "Volleyball Player", "Sandcastle Making Kid", "Instagrammer", "Seagull Stealing Food", "Volleyball Player" ],
+    "Casino" : [ "Spy", "Gambler", "Security Guard", "Angry Wife", "Kids looking at Arcades", "Gambler", "Security Guard", "Kids looking at Arcades" ],
+    "Cinema" : [ "Spy", "Popcorn Dude", "Audience", "Movie Hopping Teens", "Person manning the Projector", "Ticket Salesperson", "Audience", "Movie Hopping Teens" ],
+    "College" : [ "Spy", "Janitor", "Librarian", "Med Student", "Professor", "Sorority Girl", "CS Student", "Frat Boy" ],
+    "Court" : [ "Spy", "Defendant", "Plaintiff", "Jury Member", "Lawyer", "Judge", "Jury", "Lawyer" ],
+    "Family Reunion" : [ "Spy", "Kids", "Cousin that got promoted to adult table", "Weird Teenager", "Gossipy Mother", "Wine Aunt", "Kid", "Emo Teen" ],
+    "Farm" : [ "Spy", "Goat", "Farmer", "Farmer's Wife (Bertha)", "Cow", "Chicken", "Horse", "Pig" ],
+    "Grocery" : [ "Spy", "Person giving out samples", "Person checking membership card", "Gasoline Man", "Cashier", "Pharmacist", "Person giving out samples", "Person at food court" ],
+    "High School" : [ "Spy", "Lunch Lady", "Science Teacher", "Mascot", "GYM Teacher", "Student", "Football Player", "Band Kid" ],
+    "Hospital" : [ "Spy", "Med Student Intern", "Doctor", "Nurse", "Surgeon", "Person in the Giftshop", "Candy Striper", "Patient" ],
+    "Moon" : [ "Spy", "Astronaut", "Alien", "Rover", "Control Manager", "Space Dog", "Radioman", "Astronaut" ],
+    "Movie Set" : [ "Spy", "Director", "Caterer", "Producer", "Props Guy", "Extra", "Hair and Makeup Artist", "Main Actor/Actress" ],
+    "Office" : [ "Spy", "Coffee Runner", "Boss", "Salesman", "Receptionist", "College Intern", "Guy who's always late", "Software Engineer" ],
+    "Pirate Ship" : [ "Spy", "Parrot", "Mopper", "Sailor", "Pirate", "Captain", "Peg-legged Guy", "Pirate" ],
+    "Restaurant" : [ "Spy", "Busboy", "Waiter", "Chef", "Customer", "Bartender", "Valet", "Customer" ],
+    "Spa" : [ "Spy", "Nail Technician", "Masseuse", "Person washing Towels", "Person Getting a Facial", "Receptionist", "Person getting a facial", "Masseuse" ],
+    "Submarine" : [ "Spy", "Fish", "Passenger", "Mermaid", "Submarine Operator", "Passenger", "Passenger", "Mermaid" ],
+    "Theme Park" : [ "Spy", "Food Stand Owner", "Rollercoaster Operator", "Ride Engineer", "Kid on school trip", "Tired mother", "Kid on school trip", "Kid on School Trip" ]
+  },
+  "Rooms" : {
+    "code" : "alphanumeric",
+    "hostId" : "alphanumeric",
+    "location" : "string",
+    "numPlayers" : "int",
+    "players" : {
+      "id" : "alphanumeric",
+      "isSpy" : "boolean",
+      "name" : "string",
+      "role" : "string"
+    },
+    "started" : "boolean",
+    "timeLeft" : "int"
+  }
+}
