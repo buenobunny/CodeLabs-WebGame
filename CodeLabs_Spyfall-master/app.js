@@ -1,24 +1,11 @@
 var express = require('express');
 const app = express();
-var admin = require('firebase-admin');
-
-// Firebase App (the core Firebase SDK) is always required and
-// must be listed before other Firebase SDKs
-var firebase = require("firebase/app");
-
-// Add the Firebase products that you want to use
-require("firebase/database");
 
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + "/public"));
-
-admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    databaseURL: 'https://spyfall-2.firebaseio.com'
-});
 
 app.get('/', (request, response) => {
     response.render('index.handlebars');

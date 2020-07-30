@@ -3,11 +3,16 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "/views/layouts",
     "ignore": [
       "firebase.json",
-      "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/main.handlebars"
+      }
     ]
   },
   "storage": {

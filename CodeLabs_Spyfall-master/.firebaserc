@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "spyfall-2"
+    "default": "spyfall-2",
+    "spyfall": "spyfall-2"
   }
 }

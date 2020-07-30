@@ -1,0 +1,53 @@
+#logo
+{
+  width: 80px;
+  height: 80px;
+}
+
+#home-text
+{
+  font-family: "Candara";
+}
+
+a:link
+{
+  text-decoration: none;
+}
+
+html
+{
+  background-color: #e9ecef;
+}
+
+#joinroom
+{
+  text-align: center;
+  font-family: "Candara";
+}
+
+.joinbtn
+{
+  text-align: center;
+}
+
+.home-text
+{
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.join-room
+{
+   left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
