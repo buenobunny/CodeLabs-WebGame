@@ -2,15 +2,22 @@ var express = require('express');
 const handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
 const app = express();
 
+var firebase = require("firebase/app");
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-admin.initializeApp();
-// const admin = require('firebase-admin');
-// var serviceAccount = require("./serviceAccountKey.json");
-// admin.initializeApp({
-//     credential: admin.credential.cert(serviceAccount),
-//     databaseURL: "https://spyfall-2.firebaseio.com"
-// });
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAz9tGeCMt2wtOfTky2EZsyfy-wTwfJyOs",
+    authDomain: "spyfall-2.firebaseapp.com",
+    databaseURL: "https://spyfall-2.firebaseio.com",
+    projectId: "spyfall-2",
+    storageBucket: "spyfall-2.appspot.com",
+    messagingSenderId: "451719774814",
+    appId: "1:451719774814:web:3a4a38e16c582953d32acf",
+    measurementId: "G-7LJ4NQGS2E"
+};
+firebase.initializeApp(firebaseConfig);
+
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');

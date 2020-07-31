@@ -1,5 +1,45 @@
 <title>Welcome to Spyfall!</title>
 
+<link href="/css/index.css" rel="stylesheet" type="text/css" />
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAz9tGeCMt2wtOfTky2EZsyfy-wTwfJyOs",
+        authDomain: "spyfall-2.firebaseapp.com",
+        databaseURL: "https://spyfall-2.firebaseio.com",
+        projectId: "spyfall-2",
+        storageBucket: "spyfall-2.appspot.com",
+        messagingSenderId: "451719774814",
+        appId: "1:451719774814:web:3a4a38e16c582953d32acf",
+        measurementId: "G-7LJ4NQGS2E"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+
+
+    function accept() {
+
+        var playerName = document.getElementById("player_name").value;
+        if (playerName == "") {
+            alert("But seriously, who are you?");
+        }
+
+        else {
+            var data = {
+                name: playerName
+            }
+
+            var database = firebase.database();
+            var ref = database.ref("Players");
+            ref.push(data)
+            alert("Welcome, " + playerName + "!")
+        }
+
+
+    }
+</script>
+
 <body>
     <div class="jumbotron bg">
         <div class="row justify-content-md-center">
@@ -17,7 +57,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 offset-2">
-                        <button type="submit" class="btn btn-outline-success" onClick="getPlayerName()">I accept my
+                        <button type="submit" class="btn btn-outline-success" onclick="accept()">I accept my
                             fate</button>
                     </div>
                 </div>
@@ -28,7 +68,3 @@
 
 
 </body>
-
-<link href="/css/index.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/js/index.js"></script>
-<link rel="shortcut icon" href="#" />

@@ -1,6 +1,4 @@
 
-
-// Get a reference to the database service
 var database = firebase.database();
 var rootRef = database.ref().child('names');
 
@@ -17,9 +15,3 @@ function getPlayerName() {
     // document.getElementById("player_in_game").innerHTML = playerName;
 
 }
-
-// function getPlayerName(name) {
-//     firebase.database().ref('users/' + playerName).set({
-//         username: playerName
-//     });
-// }
