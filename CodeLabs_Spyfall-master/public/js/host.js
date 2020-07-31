@@ -1,38 +1,53 @@
-var admin = require("firebase-admin");
-
-var serviceAccount = require("./serviceAccountKey.json");
-
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://spyfall-2.firebaseio.com"
-});
-
-var config = {
+const firebaseConfig = {
     apiKey: "AIzaSyAz9tGeCMt2wtOfTky2EZsyfy-wTwfJyOs",
     authDomain: "spyfall-2.firebaseapp.com",
     databaseURL: "https://spyfall-2.firebaseio.com",
-    storageBucket: "spyfall-2.appspot.com"
+    projectId: "spyfall-2",
+    storageBucket: "spyfall-2.appspot.com",
+    messagingSenderId: "451719774814",
+    appId: "1:451719774814:web:3a4a38e16c582953d32acf",
+    measurementId: "G-7LJ4NQGS2E"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
-// Get a reference to the database service
-var database = firebase.database();
+function itemsLoad() {
+    document.getElementById("generate").style.display = "initial";
+    document.getElementById("leggo").style.display = "none";
+    document.getElementById("share").style.display = "none";
+}
 
-
-//creating the timer here
-// function getDuration() {
-//     var timeLimit = document.getElementById("duration").value;
-//     document.getElementById("time").innerHTML = timeLimit;
-// }
+window.onload = itemsLoad;
 
 
-// Gathering info
-var rootRef = database.ref().child('infos');
+function room() {
+    var eventName = document.getElementById("event").value;
+    var numofPlayers = document.getElementById('players').value;
+    var duration = document.getElementById('duration').value;
 
-$('#leggo').click(function () {
-    rootRef.set({
-        event: $('#event').val(),
-        players: $('#players').val(),
-        duration: $('#duration').val()
-    });
-})
+    if (eventName == "" || numofPlayers == null || duration == null) {
+        alert("Please fill out the form to proceed.")
+    }
+    else {
+
+        var database = firebase.database();
+        const autoId = database.ref().push().key
+
+        database.ref("Host/" + autoId).set({
+            event_name: eventName,
+            number_of_players: numofPlayers,
+            time_limit: duration,
+            room_code: autoId
+        });
+
+        document.getElementById("generate").style.display = "none";
+        document.getElementById("share").style.display = "initial";
+        document.getElementById("code").innerHTML = autoId
+    }
+
+}
+
+function share() {
+    // make a thing that copies the code onto clipboard
+
+    document.getElementById("leggo").style.display = "initial";
+}
