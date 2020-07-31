@@ -16,13 +16,21 @@
     };
     firebase.initializeApp(firebaseConfig);
 
+    function buttonLoad() {
+        document.getElementById("enter").style.display = "initial";
+        document.getElementById("proceed").style.display = "none";
+
+        document.getElementById("home-text").style.display = "initial";
+    }
+
+    window.onload = buttonLoad;
 
 
     function accept() {
 
         var playerName = document.getElementById("player_name").value;
         if (playerName == "") {
-            alert("But seriously, who are you?");
+            alert("Seriously, who are you?");
         }
 
         else {
@@ -33,7 +41,11 @@
             var database = firebase.database();
             var ref = database.ref("Players");
             ref.push(data)
-            alert("Welcome, " + playerName + "!")
+
+            document.getElementById("enter").style.display = "none";
+            document.getElementById("proceed").style.display = "initial";
+            document.getElementById("home-text").innerHTML = "Welcome, " + playerName + ". Your doom awaits.";
+
         }
 
 
@@ -41,13 +53,13 @@
 </script>
 
 <body>
-    <div class="jumbotron bg">
+    <div class="jumbotron">
         <div class="row justify-content-md-center">
             <a href="/"><img id="logo" src="/cards/icon.png" alt="logo"></a>
         </div>
 
         <div class="home-text">
-            <h1 id="home-text" class="display-3">Welcome to Spyfall! Your doom awaits</h1>
+            <h1 id="home-text" class="display-3">Welcome to Spyfall 2.0!</h1>
             <form action="home">
                 <div class="row">
                     <div class="col-sm-8 offset-2">
@@ -55,13 +67,20 @@
                             class="form-control">
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-8 offset-2">
-                        <button type="submit" class="btn btn-outline-success" onclick="accept()">I accept my
+                        <button type="submit" id="proceed" class="btn btn-outline-success">I accept my
                             fate</button>
                     </div>
                 </div>
             </form>
+
+            <div class="row">
+                <div class="col-md-8 offset-2">
+                    <button type="submit" class="btn btn-outline-success" id="enter" onclick="accept()">Enter</button>
+                </div>
+            </div>
         </div>
     </div>
 
