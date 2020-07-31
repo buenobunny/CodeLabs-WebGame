@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 
-var serviceAccount = require("../serviceAccountKey.json");
+var serviceAccount = require("./serviceAccountKey.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -20,7 +20,19 @@ var database = firebase.database();
 
 
 //creating the timer here
-function getDuration() {
-    var timeLimit = document.getElementById("duration").value;
-    document.getElementById("time").innerHTML = timeLimit;
-}
+// function getDuration() {
+//     var timeLimit = document.getElementById("duration").value;
+//     document.getElementById("time").innerHTML = timeLimit;
+// }
+
+
+// Gathering info
+var rootRef = database.ref().child('infos');
+
+$('#leggo').click(function () {
+    rootRef.set({
+        event: $('#event').val(),
+        players: $('#players').val(),
+        duration: $('#duration').val()
+    });
+})

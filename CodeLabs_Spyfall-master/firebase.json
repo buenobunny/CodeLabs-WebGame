@@ -3,15 +3,16 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "/views/layouts",
+    "public": "public",
     "ignore": [
       "firebase.json",
-      "**/node_modules/**"
+      "node_modules",
+      "serviceAccountKey.json"
     ],
     "rewrites": [
       {
-        "source": "/",
-        "destination": "/main.handlebars"
+        "source": "**",
+        "function": "app"
       }
     ]
   },

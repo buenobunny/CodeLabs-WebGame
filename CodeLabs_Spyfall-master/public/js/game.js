@@ -19,3 +19,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 document.getElementById("time").innerHTML = "Time";
+
+function put_name() {
+    $('player_in_game').innerHTML = "Cirill";
+}
