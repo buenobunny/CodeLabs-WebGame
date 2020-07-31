@@ -41,7 +41,7 @@ function room() {
 
         document.getElementById("generate").style.display = "none";
         document.getElementById("share").style.display = "initial";
-        document.getElementById("code").innerHTML = autoId
+        document.getElementById("code").innerHTML = autoId.substr(6, 5)
     }
 
 }
