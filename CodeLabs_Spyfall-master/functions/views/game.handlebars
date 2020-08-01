@@ -1,19 +1,23 @@
 <title>Game</title>
 
+<link href="/css/game.css" rel="stylesheet" type="text/css" />
+<script src="/js/game.js"></script>
+
 <body>
 
     <div class="jumbotron bg-light">
         <a href="/"><img id="logo" src="/cards/icon.png" alt="logo"></a>
         <div class="header">
-            <h1 onClick="put_name">Name: <span id="player_in_game">*Name Goes Here*</span></h1>
-            <br>
-            <div class="row">
-                <h3 class="col-md-6">Role: </h3>
-                <h3 class="col-md-6">Location: </h3>
-            </div>
-            <br>
-            <h3>Time Left:<h3 id="time">*Timer Here*</h3>
-            </h3>
+            <h1 id="welcome">Welcome to: </h1>
+            <h2 onClick="put_name">Name: <span id="player_in_game">*Name Goes Here*</span></h1>
+                <br>
+                <div class="row">
+                    <h3 class="col-md-6" id="role">Role: </h3>
+                    <h3 class="col-md-6" id="place">Location: </h3>
+                </div>
+                <br>
+                <h3>Time Left:<h3 id="time">*Timer Here*</h3>
+                </h3>
         </div>
         <br><br>
         <div class="card-deck">
@@ -163,6 +167,3 @@
     </div>
 
 </body>
-
-
-<link href="/css/game.css" rel="stylesheet" type="text/css" />

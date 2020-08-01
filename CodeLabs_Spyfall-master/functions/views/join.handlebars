@@ -1,23 +1,31 @@
 <title>Join</title>
 
+<link href="/css/join.css" rel="stylesheet" type="text/css" />
+<script src="/js/join.js"></script>
+
 <body>
     <div class="jumbotron bg">
         <a href="/"><img id="logo" src="/cards/icon.png" alt="logo"></a>
 
         <div class="join-room">
             <h1 id="joinroom">Enter room code</h1>
-            <div class="form-group row" id="roomcode">
+            <div class="form-group row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6"><input type="text" name="roomcode" placeholder="Room Code" required="true"
+                <div class="col-md-6"><input type="text" id="roomcode" placeholder="Room Code" required="true"
                         class="form-control form-control-lg"></div>
                 <div class="col-md-3"></div>
             </div>
-            <a href="game"><button type="button" class="btn-lg btn btn-outline-dark">Lets go</button></a>
+
+            {{!-- To include or not include Let's Go button?? --}}
+            <a href="game"><button type="button" id="leggo" class="btn-lg btn btn-outline-dark">Lets go</button></a>
+
+            <div id="enterRoom">
+                <button type="button" class="btn btn-secondary" onclick="enter()">Enter Code</button>
+            </div>
         </div>
+
 
     </div>
 
-  
-</body>
 
-<link href="/css/join.css" rel="stylesheet" type="text/css" />
+</body>

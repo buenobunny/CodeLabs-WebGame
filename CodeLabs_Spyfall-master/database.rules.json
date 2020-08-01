@@ -1,6 +1,9 @@
 {
   "rules": {
     ".read": true,
-    ".write": true
+    ".write": true,
+    "Host": {
+      ".indexOn": "room_code"
+    }
   }
 }
