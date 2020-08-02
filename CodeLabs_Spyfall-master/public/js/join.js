@@ -49,5 +49,5 @@ function enter() {
 /* Stuff to figure out:
 - Assign the role of a player to the person with the name
 - Will I or will I not get rid of the leggo button?
-
+- If Person enters a room code, their name would be entered in "players"
 */

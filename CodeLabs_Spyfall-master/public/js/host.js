@@ -20,12 +20,14 @@ function room() {
         var database = firebase.database();
         const autoId = database.ref().push().key
         const roomCode = autoId.substr(6, 5)
+        const locationCode = Math.floor(Math.random() * 20)
 
         database.ref("Host/" + autoId).set({
             event_name: eventName,
             number_of_players: numofPlayers,
             time_limit: duration,
-            room_code: roomCode
+            room_code: roomCode,
+            location_num: locationCode
         });
 
         document.getElementById("generate").style.display = "none";

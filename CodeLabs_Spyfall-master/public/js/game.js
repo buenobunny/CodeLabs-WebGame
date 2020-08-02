@@ -30,18 +30,18 @@ var roles = {
 
 var database = firebase.database()
 
-// Randomize the Current Location
-var ranLoc = Math.floor(Math.random() * 20)
-var currentLocation = locations[ranLoc]
-
 function infoLoad() {
 
-    database.ref(`Host/-MDbyvnepPe-GwriRleJ/`).once("value", snapshot => {
+    database.ref(`Host/-MDgiNJYDjEEAhEP9oiK/`).once("value", snapshot => {
 
         // Access info from database (kinda slow tho)
         var timeLimit = snapshot.val().time_limit;
         var numPlayers = snapshot.val().number_of_players;
         var event = snapshot.val().event_name;
+        var locationCode = snapshot.val().location_num
+
+        // Picks out the location
+        var currentLocation = locations[locationCode]
 
         document.getElementById("time").innerHTML = `${timeLimit} minutes left!`;
         document.getElementById("welcome").innerHTML = `Welcome to: ${event}!`
