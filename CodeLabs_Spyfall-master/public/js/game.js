@@ -43,8 +43,9 @@ function infoLoad() {
         // Picks out the location
         var currentLocation = locations[locationCode]
 
-        document.getElementById("time").innerHTML = `${timeLimit} minutes left!`;
+        document.getElementById("time").innerHTML = `${timeLimit}:00`;
         document.getElementById("welcome").innerHTML = `Welcome to: ${event}!`
+        document.getElementById("player_in_game").innerHTML = "Cirill";
 
         // Randomize the Role
         var ranRole = Math.floor(Math.random() * numPlayers)
@@ -70,7 +71,8 @@ window.onload = infoLoad;
 
 Stuff to figure out:
 - Have different layouts depending on if they're the host or the player
-- Line 39 has the event hardcoded.. figure out how to not do that (how to access info from previous pages)
+- Line 35 has the hosting info.. figure out how to not do that (how to access info from previous pages)
 - Access the name of the current player for the "Name here" (do we reaalllyyy need this)
 - Should players be able to see the "end game" button too?
+- name for now is hardcoded
 */
